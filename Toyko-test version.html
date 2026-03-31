@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>東京5天4夜行程（晴天/雨天切換）</title>
+<style>
+body { font-family: Arial; margin:0; background:#f5f7fa;}
+header { background:#111; color:white; padding:20px; text-align:center;}
+.container { max-width:900px; margin:auto; padding:15px;}
+.day { background:white; margin-bottom:12px; border-radius:10px; border:1px solid #ddd;}
+.summary { padding:12px; cursor:pointer; font-weight:bold; background:#eee;}
+.content { padding:12px; display:none;}
+.item { margin:8px 0;}
+.place { color:#007bff; font-weight:bold;}
+.btn { display:inline-block; margin-top:4px; padding:4px 8px; background:#007bff; color:white; border-radius:5px; font-size:12px;}
+.toggle-btn { margin:10px 5px; padding:6px 12px; background:#ff6600; color:white; border:none; border-radius:6px; cursor:pointer;}
+</style>
+<script>
+function toggle(id){
+  var x=document.getElementById(id);
+  x.style.display = x.style.display==="block"?"none":"block";
+}
+function switchVersion(version){
+  document.getElementById('sunny').style.display = (version==='sunny') ? 'block':'none';
+  document.getElementById('rainy').style.display = (version==='rainy') ? 'block':'none';
+}
+</script>
+</head>
+<body>
+
+<header>
+<h2>東京5天4夜行程</h2>
+<button class="toggle-btn" onclick="switchVersion('sunny')">☀️ 晴天版</button>
+<button class="toggle-btn" onclick="switchVersion('rainy')">🌧 雨天版</button>
+</header>
+
+<div class="container">
+
+<!-- 晴天版 -->
+<div id="sunny" style="display:block">
+
+<!-- Day1 -->
+<div class="day">
+<div class="summary" onclick="toggle('s1')">Day1｜8/10 抵達東京</div>
+<div class="content" id="s1">
+<div class="item">🚄 N’EX → 東京站（60分鐘）</div>
+<div class="item">📍 <a class="place" href="https://www.google.com/search?q=東京車站">東京車站</a> <a class="btn" href="https://maps.google.com/?q=東京車站">導航</a></div>
+<div class="item">🍣 晚餐：花丸 / 六厘舎</div>
+<div class="item">備案：<a class="place" href="https://www.google.com/search?q=KITTE 丸之內 展望台">KITTE展望台</a> <a class="btn" href="https://maps.google.com/?q=KITTE 丸之內">導航</a></div>
+</div>
+</div>
+
+<!-- Day2 -->
+<div class="day">
+<div class="summary" onclick="toggle('s2')">Day2｜8/11 淺草+尾花鰻魚飯</div>
+<div class="content" id="s2">
+<div class="item">📍 <a class="place" href="https://www.google.com/search?q=淺草寺">淺草寺</a> <a class="btn" href="https://maps.google.com/?q=淺草寺">導航</a></div>
+<div class="item">🍱 <a class="place" href="https://www.google.com/search?q=尾花 鰻魚飯">尾花鰻魚飯</a> <a class="btn" href="https://maps.google.com/?q=尾花 南千住">導航</a></div>
+<div class="item">📍 <a class="place" href="https://www.google.com/search?q=晴空塔">晴空塔</a> <a class="btn" href="https://maps.google.com/?q=東京晴空塔">導航</a></div>
+<div class="item">備案：<a class="place" href="https://www.google.com/search?q=隅田川">隅田川</a> <a class="btn" href="https://maps.google.com/?q=隅田川">導航</a></div>
+</div>
+</div>
+
+<!-- Day3 -->
+<div class="day">
+<div class="summary" onclick="toggle('s3')">Day3｜8/12 新宿澀谷＋銀座小十</div>
+<div class="content" id="s3">
+<div class="item">📍 <a class="place" href="https://www.google.com/search?q=新宿御苑">新宿御苑</a> <a class="btn" href="https://maps.google.com/?q=新宿御苑">導航</a></div>
+<div class="item">📍 <a class="place" href="https://www.google.com/search?q=明治神宮">明治神宮</a> <a class="btn" href="https://maps.google.com/?q=明治神宮">導航</a></div>
+<div class="item">🌆 <a class="place" href="https://www.google.com/search?q=SHIBUYA SKY">SHIBUYA SKY</a> <a class="btn" href="https://maps.google.com/?q=SHIBUYA SKY">導航</a></div>
+<div class="item">🍱 <a class="place" href="https://www.google.com/search?q=銀座小十">銀座小十</a> <a class="btn" href="https://maps.google.com/?q=銀座小十">導航</a></div>
+<div class="item">備案：<a class="place" href="https://www.google.com/search?q=表參道">表參道</a> <a class="btn" href="https://maps.google.com/?q=表參道">導航</a></div>
+</div>
+</div>
+
+<!-- Day4 -->
+<div class="day">
+<div class="summary" onclick="toggle('s4')">Day4｜8/13 文青代官山＋Le Labo</div>
+<div class="content" id="s4">
+<div class="item">📍 <a class="place" href="https://www.google.com/search?q=下北澤">下北澤</a></div>
+<div class="item">📍 <a class="place" href="https://www.google.com/search?q=中目黑">中目黑</a></div>
+<div class="item">🌿 <a class="place" href="https://www.google.com/search?q=Le Labo 代官山">Le Labo Gaiac 10</a> <a class="btn" href="https://maps.google.com/?q=Le Labo 代官山">導航</a></div>
+<div class="item">備案：<a class="place" href="https://www.google.com/search?q=池袋">池袋</a> <a class="btn" href="https://maps.google.com/?q=池袋">導航</a></div>
+</div>
+</div>
+
+<!-- Day5 -->
+<div class="day">
+<div class="summary" onclick="toggle('s5')">Day5｜8/14 築地市場＋收尾</div>
+<div class="content" id="s5">
+<div class="item">📍 <a class="place" href="https://www.google.com/search?q=築地市場">築地市場</a> <a class="btn" href="https://maps.google.com/?q=築地場外市場">導航</a></div>
+<div class="item">備案：<a class="place" href="https://www.google.com/search?q=銀座三越">銀座三越</a> <a class="btn" href="https://maps.google.com/?q=銀座三越">導航</a></div>
+</div>
+</div>
+
+</div>
+
+<!-- 雨天版 -->
+<div id="rainy" style="display:none">
+
+<!-- Day1 -->
+<div class="day">
+<div class="summary" onclick="toggle('r1')">Day1｜雨天備案</div>
+<div class="content" id="r1">
+<div class="item">📍 <a class="place" href="https://www.google.com/search?q=東京車站地下街">東京站地下街</a> <a class="btn" href="https://maps.google.com/?q=東京車站地下街">導航</a></div>
+<div class="item">📍 <a class="place" href="https://www.google.com/search?q=KITTE 丸之內">KITTE 商場</a> <a class="btn" href="https://maps.google.com/?q=KITTE 丸之內">導航</a></div>
+</div>
+</div>
+
+<!-- Day2 -->
+<div class="day">
+<div class="summary" onclick="toggle('r2')">Day2｜雨天淺草+尾花鰻魚飯</div>
+<div class="content" id="r2">
+<div class="item">📍 <a class="place" href="https://www.google.com/search?q=淺草地下街">淺草地下街</a> <a class="btn" href="https://maps.google.com/?q=淺草地下街">導航</a></div>
+<div class="item">🍱 <a class="place" href="https://www.google.com/search?q=尾花 鰻魚飯">尾花鰻魚飯</a> <a class="btn" href="https://maps.google.com/?q=尾花 南千住">導航</a></div>
+<div class="item">📍 <a class="place" href="https://www.google.com/search?q=晴空塔商場">晴空塔商場</a> <a class="btn" href="https://maps.google.com/?q=東京晴空塔">導航</a></div>
+</div>
+</div>
+
+<!-- Day3 -->
+<div class="day">
+<div class="summary" onclick="toggle('r3')">Day3｜雨天新宿澀谷＋銀座小十</div>
+<div class="content" id="r3">
+<div class="item">📍 <a class="place" href="https://www.google.com/search?q=新宿Lumine">新宿Lumine</a> <a class="btn" href="https://maps.google.com/?q=新宿Lumine">導航</a></div>
+<div class="item">📍 <a class="place" href="https://www.google.com/search?q=澀谷PARCO">澀谷 PARCO</a> <a class="btn" href="https://maps.google.com/?q=澀谷PARCO">導航</a></div>
+<div class="item">🍱 <a class="place" href="https://www.google.com/search?q=銀座小十">銀座小十</a> <a class="btn" href="https://maps.google.com/?q=銀座小十">導航</a></div>
+</div>
+</div>
+
+<!-- Day4 -->
+<div class="day">
+<div class="summary" onclick="toggle('r4')">Day4｜雨天文青代官山＋Le Labo</div>
+<div class="content" id="r4">
+<div class="item">📍 <a class="place" href="https://www.google.com/search?q=代官山T-SITE">代官山T-SITE</a> <a class="btn" href="https://maps.google.com/?q=代官山T-SITE">導航</a></div>
+<div class="item">🌿 <a class="place" href="https://www.google.com/search?q=Le Labo 代官山">Le Labo Gaiac 10</a> <a class="btn" href="https://maps.google.com/?q=Le Labo 代官山">導航</a></div>
+</div>
+</div>
+
+<!-- Day5 -->
+<div class="day">
+<div class="summary" onclick="toggle('r5')">Day5｜雨天築地市場＋收尾</div>
+<div class="content" id="r5">
+<div class="item">📍 <a class="place" href="https://www.google.com/search?q=築地市場">築地市場</a> <a class="btn" href="https://maps.google.com/?q=築地場外市場">導航</a></div>
+<div class="item">備案：<a class="place" href="https://www.google.com/search?q=銀座三越">銀座三越</a> <a class="btn" href="https://maps.google.com/?q=銀座三越">導航</a></div>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

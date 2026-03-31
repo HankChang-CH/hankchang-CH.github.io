@@ -8,51 +8,23 @@
 
 <style>
 body { font-family: Arial; margin:0; background:#f5f7fa;}
-header { background:#111; color:white; padding:25px; text-align:center;}
-.container { max-width:900px; margin:auto; padding:20px;}
+header { background:#111; color:white; padding:20px; text-align:center;}
+.container { max-width:900px; margin:auto; padding:15px;}
 
-.day { background:white; margin-bottom:15px; border-radius:12px; border:1px solid #ddd;}
-.summary { padding:15px; cursor:pointer; font-weight:bold; background:#f0f0f0;}
-.content { padding:15px; display:none;}
+.day { background:white; margin-bottom:12px; border-radius:10px; border:1px solid #ddd;}
+.summary { padding:12px; cursor:pointer; font-weight:bold; background:#eee;}
+.content { padding:12px; display:none;}
 
-.item { margin:10px 0;}
-a { text-decoration:none;}
-
-.place {
-  color:#007bff;
-  font-weight:bold;
-}
-
-.route {
-  background:#eef5ff;
-  padding:8px;
-  border-radius:6px;
-  margin:8px 0;
-  font-size:14px;
-}
-
-.btn {
-  display:inline-block;
-  margin-top:5px;
-  padding:5px 10px;
-  background:#007bff;
-  color:white;
-  border-radius:5px;
-  font-size:13px;
-}
-
-.note {
-  background:#fff3cd;
-  padding:10px;
-  border-radius:8px;
-  margin-top:10px;
-}
+.item { margin:8px 0;}
+.route { background:#eef5ff; padding:6px; border-radius:6px; font-size:13px;}
+.place { color:#007bff; font-weight:bold;}
+.btn { display:inline-block; margin-top:4px; padding:4px 8px; background:#007bff; color:white; border-radius:5px; font-size:12px;}
 </style>
 
 <script>
 function toggle(id){
-  var x = document.getElementById(id);
-  x.style.display = x.style.display === "block" ? "none" : "block";
+  var x=document.getElementById(id);
+  x.style.display = x.style.display==="block"?"none":"block";
 }
 </script>
 
@@ -61,67 +33,81 @@ function toggle(id){
 <body>
 
 <header>
-<h1>東京5天4夜行程</h1>
-<p>最終終極版｜查資料＋導航一體</p>
+<h2>東京5天4夜行程</h2>
 </header>
 
 <div class="container">
 
-<!-- Day1 (8/10)-->
+<!-- Day1 -->
 
 <div class="day">
 <div class="summary" onclick="toggle('d1')">Day1｜8/10 抵達東京</div>
 <div class="content" id="d1">
 
-<div class="item">✈️ 桃園 → 成田</div>
-<div class="route">🚄 N’EX：約60分鐘 → 東京站</div>
+<div class="route">N’EX → 東京站（60分鐘）</div>
 
 <div class="item">
 📍 <a class="place" href="https://www.google.com/search?q=東京車站">東京車站</a><br>
 <a class="btn" href="https://maps.google.com/?q=東京車站">導航</a>
 </div>
 
-</div>
-</div>
-
-<!-- Day2 (8/11)-->
-
-<div class="day">
-<div class="summary" onclick="toggle('d2')">Day2｜8/11 淺草＋晴空塔</div>
-<div class="content" id="d2">
-
-<div class="route">🚇 約15分鐘 → 淺草站</div>
+<div class="item">🍣 晚餐：花丸 / 六厘舎</div>
 
 <div class="item">
-📍 <a class="place" href="https://www.google.com/search?q=淺草寺">淺草寺</a><br>
+備案：<br>
+<a class="place" href="https://www.google.com/search?q=KITTE 丸之內 展望台">KITTE展望台</a>
+<a class="btn" href="https://maps.google.com/?q=KITTE 丸之內">導航</a><br>
+<a class="place" href="https://www.google.com/search?q=丸之內仲通">丸之內</a>
+<a class="btn" href="https://maps.google.com/?q=丸之內仲通">導航</a>
+</div>
+
+</div>
+</div>
+
+<!-- Day2 -->
+
+<div class="day">
+<div class="summary" onclick="toggle('d2')">Day2｜8/11 淺草</div>
+<div class="content" id="d2">
+
+<div class="route">地鐵 → 淺草（15分鐘）</div>
+
+<div class="item">
+📍 <a class="place" href="https://www.google.com/search?q=淺草寺">淺草寺</a>
 <a class="btn" href="https://maps.google.com/?q=淺草寺">導航</a>
 </div>
 
 <div class="item">
-🍱 <a class="place" href="https://www.google.com/search?q=尾花 鰻魚飯">尾花</a><br>
+🍱 <a class="place" href="https://www.google.com/search?q=尾花 鰻魚飯">尾花</a>
 <a class="btn" href="https://maps.google.com/?q=尾花 南千住">導航</a>
 </div>
 
-<div class="route">🚇 約10分鐘 → 押上站</div>
-
 <div class="item">
-📍 <a class="place" href="https://www.google.com/search?q=東京晴空塔">晴空塔</a><br>
+📍 <a class="place" href="https://www.google.com/search?q=晴空塔">晴空塔</a>
 <a class="btn" href="https://maps.google.com/?q=東京晴空塔">導航</a>
 </div>
 
+<div class="item">
+備案：<br>
+<a class="place" href="https://www.google.com/search?q=隅田川">隅田川</a>
+<a class="btn" href="https://maps.google.com/?q=隅田川">導航</a><br>
+<a class="place" href="https://www.google.com/search?q=雷門">雷門</a>
+<a class="btn" href="https://maps.google.com/?q=雷門">導航</a>
+</div>
+
 </div>
 </div>
 
-<!-- Day3 (8/12)-->
+<!-- Day3 -->
 
 <div class="day">
-<div class="summary" onclick="toggle('d3')">Day3｜8/12 新宿＋澀谷＋銀座小十</div>
+<div class="summary" onclick="toggle('d3')">Day3｜8/12 新宿澀谷</div>
 <div class="content" id="d3">
 
-<div class="route">🚆 約15分鐘 → 新宿</div>
+<div class="route">山手線 → 新宿（15分鐘）</div>
 
 <div class="item">
-📍 <a class="place" href="https://www.google.com/search?q=新宿御苑">新宿御苑</a><br>
+📍 <a class="place" href="https://www.google.com/search?q=新宿御苑">新宿御苑</a>
 <a class="btn" href="https://maps.google.com/?q=新宿御苑">導航</a>
 </div>
 
@@ -129,77 +115,82 @@ function toggle(id){
 📍 <a class="place" href="https://www.google.com/search?q=明治神宮">明治神宮</a>
 </div>
 
-<div class="route">🚆 約7分鐘 → 澀谷</div>
-
 <div class="item">
 🌆 <a class="place" href="https://www.google.com/search?q=SHIBUYA SKY">SHIBUYA SKY</a>
 </div>
 
-<div class="route">🚇 約15分鐘 → 銀座</div>
-
 <div class="item">
-🍱 <a class="place" href="https://www.google.com/search?q=銀座小十">銀座小十</a><br>
+🍱 <a class="place" href="https://www.google.com/search?q=銀座小十">銀座小十</a>
 <a class="btn" href="https://maps.google.com/?q=銀座小十">導航</a>
 </div>
 
+<div class="item">
+備案：<br>
+<a class="place" href="https://www.google.com/search?q=表參道">表參道</a>
+<a class="btn" href="https://maps.google.com/?q=表參道">導航</a><br>
+<a class="place" href="https://www.google.com/search?q=歌舞伎町">歌舞伎町</a>
+<a class="btn" href="https://maps.google.com/?q=歌舞伎町">導航</a>
+</div>
+
 </div>
 </div>
 
-<!-- Day4 (8/13)-->
+<!-- Day4 -->
 
 <div class="day">
-<div class="summary" onclick="toggle('d4')">Day4｜8/13 文青＋gaiac 10</div>
+<div class="summary" onclick="toggle('d4')">Day4｜8/13 文青</div>
 <div class="content" id="d4">
-
-<div class="route">🚆 約15分鐘 → 下北澤</div>
 
 <div class="item">
 📍 <a class="place" href="https://www.google.com/search?q=下北澤">下北澤</a>
 </div>
 
-<div class="route">🚆 約20分鐘 → 中目黑</div>
-
 <div class="item">
 📍 <a class="place" href="https://www.google.com/search?q=中目黑">中目黑</a>
 </div>
-
-<div class="route">🚆 約3分鐘 → 代官山</div>
 
 <div class="item">
 📍 <a class="place" href="https://www.google.com/search?q=代官山">代官山</a>
 </div>
 
 <div class="item">
-🌿 <a class="place" href="https://www.google.com/search?q=Le Labo gaiac 10">Le Labo（gaiac 10）</a><br>
+🌿 <a class="place" href="https://www.google.com/search?q=Le Labo gaiac 10">Le Labo</a>
 <a class="btn" href="https://maps.google.com/?q=Le Labo 代官山">導航</a>
 </div>
 
+<div class="item">
+備案：<br>
+<a class="place" href="https://www.google.com/search?q=池袋">池袋</a>
+<a class="btn" href="https://maps.google.com/?q=池袋">導航</a>
+</div>
+
 </div>
 </div>
 
-<!-- Day5 (8/14)-->
+<!-- Day5 -->
 
 <div class="day">
-<div class="summary" onclick="toggle('d5')">Day5｜8/14 築地＋回程</div>
+<div class="summary" onclick="toggle('d5')">Day5｜8/14 築地回程</div>
 <div class="content" id="d5">
 
-<div class="route">🚇 約15分鐘 → 築地</div>
-
 <div class="item">
-📍 <a class="place" href="https://www.google.com/search?q=築地市場">築地市場</a><br>
+📍 <a class="place" href="https://www.google.com/search?q=築地市場">築地市場</a>
 <a class="btn" href="https://maps.google.com/?q=築地場外市場">導航</a>
 </div>
 
-<div class="route">🚄 約60分鐘 → 成田</div>
+<div class="route">N’EX → 成田（60分鐘）</div>
+
+<div class="item">
+備案：<br>
+<a class="place" href="https://www.google.com/search?q=濱離宮">濱離宮</a>
+<a class="btn" href="https://maps.google.com/?q=濱離宮庭園">導航</a>
+</div>
 
 </div>
-</div>
-
-<div class="note">
-🎆 八月提醒：隅田川煙火（記得查日期）
 </div>
 
 </div>
 
 </body>
 </html>
+

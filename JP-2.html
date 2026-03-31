@@ -1,28 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>東京5天4夜行程</title>
+
+<style>
+body { font-family: Arial; margin:0; background:#f5f7fa;}
+header { background:#111; color:white; padding:25px; text-align:center;}
+.container { max-width:900px; margin:auto; padding:20px;}
+
+.day {
+  background:white;
+  margin-bottom:15px;
+  border-radius:12px;
+  border:1px solid #ddd;
+}
+
+.summary {
+  padding:15px;
+  cursor:pointer;
+  font-weight:bold;
+  background:#f0f0f0;
+}
+
+.content {
+  padding:15px;
+  display:none;
+}
+
+.item { margin:8px 0;}
+a { color:#007bff; text-decoration:none;}
+
+.route {
+  background:#eef5ff;
+  padding:8px;
+  border-radius:6px;
+  margin:8px 0;
+  font-size:14px;
+}
+
+.btn {
+  display:inline-block;
+  margin-top:5px;
+  padding:5px 10px;
+  background:#007bff;
+  color:white;
+  border-radius:5px;
+  font-size:13px;
+}
+
+.note {
+  background:#fff3cd;
+  padding:10px;
+  border-radius:8px;
+  margin-top:10px;
+}
+</style>
+
+<script>
+function toggle(id){
+  var x = document.getElementById(id);
+  x.style.display = x.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>東京5天4夜行程</h1>
+<p>終極版｜導航＋交通＋一鍵查詢</p>
+</header>
+
+<div class="container">
+
+<!-- Day1 (8/10) -->
+
 <div class="day">
-<h2>Day 4 <span class="date">8/13</span>｜文青購物日</h2>
+<div class="summary" onclick="toggle('d1')">Day1｜8/10 抵達東京</div>
+<div class="content" id="d1">
 
-<div class="item">🚆 →【下北澤站】</div>
-<div class="item">📍 <a href="https://maps.google.com/?q=下北澤">下北澤</a></div>
+<div class="item">✈️ 桃園 08:50 → 成田</div>
 
-<div class="item">🚆 →【中目黑站】</div>
-<div class="item">📍 <a href="https://maps.google.com/?q=中目黑">中目黑</a></div>
+<div class="route">🚄 N’EX：約60分鐘（直達東京站）</div>
 
-<div class="item">👜 <a href="https://maps.google.com/?q=gaiac 10 中目黑">gaiac 10（包包選物店）</a></div>
+<div class="item">📍 東京車站</div>
+<a class="btn" href="https://maps.google.com/?q=東京車站">導航</a>
 
-<div class="item">🚆 →【代官山站】</div>
-<div class="item">🌿 <a href="https://maps.google.com/?q=Le Labo 代官山">Le Labo（gaiac 10 東京限定香水）</a></div>
+</div>
+</div>
+
+<!-- Day2 (8/11)-->
+
+<div class="day">
+<div class="summary" onclick="toggle('d2')">Day2｜8/11 淺草＋晴空塔</div>
+<div class="content" id="d2">
+
+<div class="route">🚇 銀座線：約15分鐘 → 淺草站</div>
+
+<div class="item">📍 淺草寺</div>
+<a class="btn" href="https://maps.google.com/?q=淺草寺">導航</a>
+
+<div class="item">🍱 尾花（南千住站）</div>
+<a class="btn" href="https://maps.google.com/?q=尾花 南千住">導航</a>
+
+<div class="route">🚇 約10分鐘 → 押上站</div>
+
+<div class="item">📍 晴空塔</div>
+<a class="btn" href="https://maps.google.com/?q=東京晴空塔">導航</a>
+
+</div>
+</div>
+
+<!-- Day3 (8/12)-->
+
+<div class="day">
+<div class="summary" onclick="toggle('d3')">Day3｜8/12 新宿＋澀谷＋米其林</div>
+<div class="content" id="d3">
+
+<div class="route">🚆 山手線：約15分鐘 → 新宿</div>
+
+<div class="item">📍 新宿御苑</div>
+<a class="btn" href="https://maps.google.com/?q=新宿御苑">導航</a>
+
+<div class="item">📍 明治神宮（原宿）</div>
+
+<div class="route">🚆 約7分鐘 → 澀谷</div>
+
+<div class="item">🌆 SHIBUYA SKY</div>
+
+<div class="route">🚇 約15分鐘 → 銀座</div>
+
+<div class="item">🍱 銀座小十（19:00）</div>
+<a class="btn" href="https://maps.google.com/?q=銀座小十">導航</a>
+
+</div>
+</div>
+
+<!-- Day4 (8/13)-->
+
+<div class="day">
+<div class="summary" onclick="toggle('d4')">Day4｜8/13 文青＋gaiac 10</div>
+<div class="content" id="d4">
+
+<div class="route">🚆 小田急線：約15分鐘 → 下北澤</div>
+
+<div class="item">📍 下北澤</div>
+
+<div class="route">🚆 約20分鐘 → 中目黑</div>
+
+<div class="item">📍 中目黑</div>
+
+<div class="route">🚆 約3分鐘 → 代官山</div>
+
+<div class="item">📍 代官山</div>
+
+<div class="item">🌿 Le Labo（gaiac 10）</div>
+<a class="btn" href="https://maps.google.com/?q=Le Labo 代官山">導航</a>
+
+</div>
+</div>
+
+<!-- Day5 (8/14)-->
+
+<div class="day">
+<div class="summary" onclick="toggle('d5')">Day5｜8/14 築地＋回程</div>
+<div class="content" id="d5">
+
+<div class="route">🚇 日比谷線：約15分鐘 → 築地</div>
+
+<div class="item">📍 築地市場</div>
+<a class="btn" href="https://maps.google.com/?q=築地場外市場">導航</a>
+
+<div class="route">🚄 N’EX：約60分鐘 → 成田</div>
+
+<div class="item">✈️ 17:55 回台</div>
+
+</div>
+</div>
 
 <div class="note">
-🛍 推薦：<br>
-- <a href="https://maps.google.com/?q=2k540 AKI-OKA ARTISAN">2k540（御徒町站）</a><br>
-- gaiac 10（中目黑包包店）<br>
-- 代官山皮件小店
-</div>
-
-<div class="alt">
-備案：
-<a href="https://maps.google.com/?q=表參道">表參道</a> /
-<a href="https://maps.google.com/?q=池袋">池袋</a>
+🎆 八月注意：隅田川煙火（需提前查日期）
 </div>
 
 </div>
+
+</body>
+</html>

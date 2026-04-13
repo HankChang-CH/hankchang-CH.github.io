@@ -4,10 +4,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>東京5天4夜行程（實戰版）</title>
+<title>東京5天4夜行程</title>
 
 <style>
 body { font-family: Arial; margin:0; background:#f5f7fa;}
+header { background:#111; color:white; padding:15px; text-align:center;}
 .container { max-width:900px; margin:auto; padding:15px;}
 .day { background:white; margin-bottom:12px; border-radius:10px; border:1px solid #ddd;}
 .summary { padding:12px; font-weight:bold; background:#eee;}
@@ -15,128 +16,135 @@ body { font-family: Arial; margin:0; background:#f5f7fa;}
 .item { margin:6px 0;}
 .time { color:#888; font-size:13px;}
 .place { color:#007bff; font-weight:bold;}
-.btn { margin-left:6px; font-size:12px;}
+.btn { font-size:12px; margin-left:6px;}
 .food { color:#e67e22;}
-.rain { color:#2980b9;}
+.toggle-btn { margin:5px; padding:6px 12px; border:none; border-radius:6px; cursor:pointer; background:#ff6600; color:white;}
 </style>
+
+<script>
+function switchMode(mode){
+  document.getElementById("sunny").style.display = (mode==="sunny")?"block":"none";
+  document.getElementById("rainy").style.display = (mode==="rainy")?"block":"none";
+}
+</script>
 
 </head>
 
 <body>
 
+<header>
+<h2>東京5天4夜行程</h2>
+<button class="toggle-btn" onclick="switchMode('sunny')">☀️ 晴天</button>
+<button class="toggle-btn" onclick="switchMode('rainy')">🌧 雨天</button>
+</header>
+
 <div class="container">
 
-<!-- Day1 -->
+<!-- ☀️ 晴天 -->
+
+<div id="sunny">
 
 <div class="day">
-<div class="summary">Day1｜8/10 抵達＋東京站</div>
+<div class="summary">Day1｜抵達＋東京站</div>
 <div class="content">
-
-<div class="item"><span class="time">13:00</span> 成田機場 → NEX → 東京站</div>
-<div class="item"><span class="time">15:00</span> 飯店 Check-in</div>
-
+<div class="item"><span class="time">13:00</span> 成田 → 東京站</div>
+<div class="item"><span class="time">15:00</span> Check-in</div>
 <div class="item">
-<span class="time">17:00</span> 📍 <a class="place" href="https://www.google.com/search?q=東京キャラクターストリート">東京車站一番街</a>
-<a class="btn" href="https://maps.google.com/?q=東京キャラクターストリート">導航</a>
+<span class="time">17:00</span> 📍 <a class="place" href="https://maps.google.com/?q=東京キャラクターストリート">東京一番街</a>
 </div>
-
-<div class="item">👉 必逛：Chiikawa / Hello Kitty</div>
-
-<div class="item food"><span class="time">18:30</span> 🍣 六厘舎 / 花丸壽司</div>
-
-<div class="item rain">
-🌧 雨天：同上（全室內）<br>
-備案：<a href="https://maps.google.com/?q=KITTE 丸之內">KITTE 丸之內</a>
-</div>
-
+<div class="item">🐰 Chiikawa / 🎀 Hello Kitty</div>
+<div class="item food">18:30 六厘舎 / 花丸壽司</div>
 </div>
 </div>
-
-<!-- Day2 -->
 
 <div class="day">
-<div class="summary">Day2｜淺草＋尾花</div>
+<div class="summary">Day2｜淺草</div>
 <div class="content">
-
-<div class="item"><span class="time">10:00</span> 📍 <a class="place" href="https://maps.google.com/?q=淺草寺">淺草寺</a></div>
-
-<div class="item food">🍡 仲見世小吃</div>
-
-<div class="item"><span class="time">12:30</span> 🍱 <a class="place" href="https://maps.google.com/?q=尾花 南千住">尾花鰻魚飯</a></div>
-
-<div class="item"><span class="time">15:00</span> 📍 <a class="place" href="https://maps.google.com/?q=東京晴空塔">晴空塔</a></div>
-
-<div class="item rain">
-🌧 雨天：縮短淺草停留 → 轉晴空塔室內<br>
-備案：<a href="https://maps.google.com/?q=淺草文化觀光中心">文化觀光中心</a>
-</div>
-
+<div class="item"><span class="time">10:00</span> 淺草寺</div>
+<div class="item"><span class="time">12:30</span> 尾花</div>
+<div class="item"><span class="time">15:00</span> 晴空塔</div>
 </div>
 </div>
-
-<!-- Day3 -->
 
 <div class="day">
-<div class="summary">Day3｜新宿 澀谷 銀座（重點）</div>
+<div class="summary">Day3｜新宿 澀谷 銀座</div>
 <div class="content">
-
-<div class="item"><span class="time">10:00</span> 📍 <a class="place" href="https://maps.google.com/?q=新宿御苑">新宿御苑</a></div>
-
-<div class="item"><span class="time">13:00</span> 📍 <a class="place" href="https://maps.google.com/?q=SHIBUYA SKY">SHIBUYA SKY</a></div>
-
-<div class="item"><span class="time">16:00</span> 👜 <a class="place" href="https://maps.google.com/?q=Goyard 銀座">Goyard 銀座</a></div>
-
-<div class="item food"><span class="time">19:00</span> 🍽 <a class="place" href="https://maps.google.com/?q=銀座小十">銀座小十</a></div>
-
-<div class="item rain">
-🌧 雨天：改為購物動線<br>
-備案：<a href="https://maps.google.com/?q=新宿Lumine">Lumine</a> /
-<a href="https://maps.google.com/?q=澀谷PARCO">PARCO</a>
-</div>
-
+<div class="item"><span class="time">10:00</span> 新宿御苑</div>
+<div class="item"><span class="time">13:00</span> SHIBUYA SKY</div>
+<div class="item"><span class="time">16:00</span> Goyard</div>
+<div class="item"><span class="time">19:00</span> 銀座小十</div>
 </div>
 </div>
-
-<!-- Day4 -->
 
 <div class="day">
-<div class="summary">Day4｜文青＋香水</div>
+<div class="summary">Day4｜文青</div>
 <div class="content">
-
 <div class="item"><span class="time">11:00</span> 下北澤</div>
 <div class="item"><span class="time">14:00</span> 中目黑</div>
-
-<div class="item"><span class="time">15:30</span> 🌿 <a class="place" href="https://maps.google.com/?q=Le Labo 代官山">Le Labo</a></div>
-
-<div class="item food">☕ Onibus Coffee</div>
-
-<div class="item rain">
-🌧 雨天：改室內文青<br>
-備案：<a href="https://maps.google.com/?q=代官山T-SITE">代官山T-SITE</a>
-</div>
-
+<div class="item"><span class="time">15:30</span> Le Labo</div>
 </div>
 </div>
-
-<!-- Day5 -->
 
 <div class="day">
-<div class="summary">Day5｜築地＋回程</div>
+<div class="summary">Day5｜築地</div>
 <div class="content">
-
-<div class="item"><span class="time">08:30</span> 📍 <a class="place" href="https://maps.google.com/?q=築地場外市場">築地市場</a></div>
-
-<div class="item food">🍣 壽司 / 玉子燒 / 生蠔</div>
-
-<div class="item"><span class="time">11:00</span> 回飯店拿行李</div>
-<div class="item"><span class="time">13:30</span> 前往機場</div>
-
-<div class="item rain">
-🌧 雨天：縮短築地 → 銀座室內<br>
-備案：<a href="https://maps.google.com/?q=銀座三越">銀座三越</a>
+<div class="item"><span class="time">08:30</span> 築地市場</div>
+<div class="item"><span class="time">11:00</span> 回飯店</div>
+</div>
 </div>
 
 </div>
+
+<!-- 🌧 雨天 -->
+
+<div id="rainy" style="display:none">
+
+<div class="day">
+<div class="summary">Day1｜東京站（室內）</div>
+<div class="content">
+<div class="item"><span class="time">17:00</span> 東京一番街</div>
+<div class="item">🐰 Chiikawa / 🎀 Hello Kitty</div>
+<div class="item food">拉麵街 / 壽司</div>
+</div>
+</div>
+
+<div class="day">
+<div class="summary">Day2｜淺草（雨天）</div>
+<div class="content">
+<div class="item"><span class="time">10:00</span> 淺草寺（快速）</div>
+<div class="item"><span class="time">11:30</span> 文化觀光中心</div>
+<div class="item"><span class="time">12:30</span> 尾花</div>
+<div class="item"><span class="time">15:00</span> 晴空塔商場</div>
+</div>
+</div>
+
+<div class="day">
+<div class="summary">Day3｜購物日</div>
+<div class="content">
+<div class="item"><span class="time">10:30</span> 新宿百貨</div>
+<div class="item"><span class="time">13:30</span> 澀谷PARCO</div>
+<div class="item"><span class="time">16:30</span> Goyard</div>
+<div class="item"><span class="time">19:00</span> 銀座小十</div>
+</div>
+</div>
+
+<div class="day">
+<div class="summary">Day4｜室內文青</div>
+<div class="content">
+<div class="item"><span class="time">11:00</span> 代官山T-SITE</div>
+<div class="item"><span class="time">13:30</span> 咖啡廳</div>
+<div class="item"><span class="time">15:30</span> Le Labo</div>
+</div>
+</div>
+
+<div class="day">
+<div class="summary">Day5｜收尾</div>
+<div class="content">
+<div class="item"><span class="time">09:00</span> 築地</div>
+<div class="item"><span class="time">11:30</span> 銀座百貨</div>
+</div>
+</div>
+
 </div>
 
 </div>

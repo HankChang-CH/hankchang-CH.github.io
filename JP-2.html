@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>東京5天4夜行程</title>
+<title>東京5天4夜行程（最終版）</title>
 
 <style>
 body { font-family: Arial; margin:0; background:#f5f7fa;}
@@ -19,6 +19,7 @@ header { background:#111; color:white; padding:20px; text-align:center;}
 .btn { display:inline-block; margin-top:3px; padding:3px 6px; background:#007bff; color:white; border-radius:5px; font-size:12px;}
 .toggle-btn { margin:10px 5px; padding:6px 12px; background:#ff6600; color:white; border:none; border-radius:6px; cursor:pointer;}
 .food { color:#e67e22;}
+.highlight { color:#d35400; font-weight:bold;}
 </style>
 
 <script>
@@ -37,7 +38,7 @@ function switchVersion(version){
 <body>
 
 <header>
-<h2>東京5天4夜行程（時間軸版）</h2>
+<h2>東京5天4夜行程（最終完整版）</h2>
 <button class="toggle-btn" onclick="switchVersion('sunny')">☀️ 晴天</button>
 <button class="toggle-btn" onclick="switchVersion('rainy')">🌧 雨天</button>
 </header>
@@ -51,19 +52,25 @@ function switchVersion(version){
 <!-- Day1 -->
 
 <div class="day">
-<div class="summary" onclick="toggle('s1')">Day1｜8/10 抵達</div>
+<div class="summary" onclick="toggle('s1')">Day1｜8/10 抵達＋角色街</div>
 <div class="content" id="s1">
 
-<div class="item"><span class="time">08:50</span> ✈️ 桃園出發</div>
 <div class="item"><span class="time">13:00</span> 抵達成田 → NEX</div>
-<div class="item"><span class="time">15:00</span> 抵達東京站</div>
+<div class="item"><span class="time">15:00</span> 東京站 / 飯店Check-in</div>
+
+<div class="item highlight"><span class="time">17:00</span> 🎀 東京車站一番街（角色街）</div>
 
 <div class="item">
-<span class="time">16:30</span> 📍 <a class="place" href="https://www.google.com/search?q=東京車站">東京車站</a>
-<a class="btn" href="https://maps.google.com/?q=東京車站">導航</a>
+🐰 <a class="place" href="https://www.google.com/search?q=ちいかわらんど 東京駅">Chiikawa</a>
+<a class="btn" href="https://maps.google.com/?q=ちいかわらんど 東京駅">導航</a>
 </div>
 
-<div class="item food">18:00 🍣 花丸 / 六厘舎</div>
+<div class="item">
+🎀 <a class="place" href="https://www.google.com/search?q=Sanrio 東京駅">Hello Kitty</a>
+<a class="btn" href="https://maps.google.com/?q=Sanrio 東京駅">導航</a>
+</div>
+
+<div class="item food">🍣 晚餐：六厘舎 / 花丸壽司 / 拉麵街</div>
 
 </div>
 </div>
@@ -71,24 +78,24 @@ function switchVersion(version){
 <!-- Day2 -->
 
 <div class="day">
-<div class="summary" onclick="toggle('s2')">Day2｜淺草</div>
+<div class="summary" onclick="toggle('s2')">Day2｜淺草＋尾花</div>
 <div class="content" id="s2">
 
-<div class="item"><span class="time">09:30</span> 淺草出發</div>
+<div class="item"><span class="time">10:00</span> 淺草</div>
 
 <div class="item">
-<span class="time">10:00</span> 📍 <a class="place" href="https://www.google.com/search?q=淺草寺">淺草寺</a>
+📍 <a class="place" href="https://www.google.com/search?q=淺草寺">淺草寺</a>
 <a class="btn" href="https://maps.google.com/?q=淺草寺">導航</a>
 </div>
 
-<div class="item food">12:00 🍱 尾花</div>
+<div class="item food">🍡 仲見世小吃</div>
+
+<div class="item"><span class="time">12:30</span> 🍱 尾花（鰻魚飯）</div>
 
 <div class="item">
-<span class="time">14:00</span> 📍 <a class="place" href="https://www.google.com/search?q=晴空塔">晴空塔</a>
+<span class="time">15:00</span> 📍 <a class="place" href="https://www.google.com/search?q=晴空塔">晴空塔</a>
 <a class="btn" href="https://maps.google.com/?q=東京晴空塔">導航</a>
 </div>
-
-<div class="item food">🍡 仲見世小吃</div>
 
 </div>
 </div>
@@ -96,22 +103,14 @@ function switchVersion(version){
 <!-- Day3 -->
 
 <div class="day">
-<div class="summary" onclick="toggle('s3')">Day3｜新宿 澀谷 銀座</div>
+<div class="summary" onclick="toggle('s3')">Day3｜新宿 澀谷 銀座（重點日）</div>
 <div class="content" id="s3">
 
 <div class="item"><span class="time">10:00</span> 新宿</div>
-
-<div class="item">
-📍 <a class="place" href="https://www.google.com/search?q=新宿御苑">新宿御苑</a>
-<a class="btn" href="https://maps.google.com/?q=新宿御苑">導航</a>
-</div>
+<div class="item">📍 新宿御苑</div>
 
 <div class="item"><span class="time">13:00</span> 澀谷</div>
-
-<div class="item">
-🌆 <a class="place" href="https://www.google.com/search?q=SHIBUYA SKY">SHIBUYA SKY</a>
-<a class="btn" href="https://maps.google.com/?q=SHIBUYA SKY">導航</a>
-</div>
+<div class="item">🌆 SHIBUYA SKY</div>
 
 <div class="item"><span class="time">16:00</span> 銀座</div>
 
@@ -125,20 +124,22 @@ function switchVersion(version){
 <a class="btn" href="https://maps.google.com/?q=銀座小十">導航</a>
 </div>
 
+<div class="item food">🍔 澀谷美食 / 銀座甜點</div>
+
 </div>
 </div>
 
 <!-- Day4 -->
 
 <div class="day">
-<div class="summary" onclick="toggle('s4')">Day4｜文青</div>
+<div class="summary" onclick="toggle('s4')">Day4｜文青＋香水</div>
 <div class="content" id="s4">
 
-<div class="item"><span class="time">10:30</span> 下北澤</div>
-<div class="item"><span class="time">13:00</span> 中目黑</div>
+<div class="item"><span class="time">11:00</span> 下北澤</div>
+<div class="item"><span class="time">14:00</span> 中目黑</div>
 
 <div class="item">
-<span class="time">15:00</span> 🌿 <a class="place" href="https://www.google.com/search?q=Le Labo 代官山">Le Labo</a>
+<span class="time">15:30</span> 🌿 <a class="place" href="https://www.google.com/search?q=Le Labo 代官山">Le Labo</a>
 <a class="btn" href="https://maps.google.com/?q=Le Labo 代官山">導航</a>
 </div>
 
@@ -150,7 +151,7 @@ function switchVersion(version){
 <!-- Day5 -->
 
 <div class="day">
-<div class="summary" onclick="toggle('s5')">Day5｜回程</div>
+<div class="summary" onclick="toggle('s5')">Day5｜築地＋回程</div>
 <div class="content" id="s5">
 
 <div class="item"><span class="time">08:30</span> 築地</div>
@@ -161,27 +162,24 @@ function switchVersion(version){
 </div>
 
 <div class="item"><span class="time">11:00</span> 回飯店拿行李</div>
-<div class="item"><span class="time">13:30</span> 前往成田</div>
-<div class="item"><span class="time">17:55</span> ✈️ 回台</div>
+<div class="item"><span class="time">13:30</span> 前往機場</div>
 
 </div>
 </div>
 
 </div>
 
-<!-- 🌧 雨天（簡化但保留核心） -->
+<!-- 🌧 雨天 -->
 
 <div id="rainy" style="display:none">
 
 <div class="day">
-<div class="summary" onclick="toggle('r3')">雨天重點</div>
-<div class="content" id="r3">
-
-<div class="item">🏬 百貨：Lumine / PARCO</div>
-<div class="item">👜 Goyard（保留）</div>
-<div class="item">🍽 銀座小十（保留）</div>
-<div class="item">☕ 咖啡廳 / 書店</div>
-
+<div class="summary" onclick="toggle('r1')">雨天建議</div>
+<div class="content" id="r1">
+🏬 百貨 / 室內商場 / 咖啡廳<br>
+🎀 東京車站角色街（可重逛）<br>
+👜 Goyard（室內）<br>
+🍽 銀座小十（保留）<br>
 </div>
 </div>
 

@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>東京5天4夜行程（V02）</title>
+<title>東京5天4夜行程（V01.4）</title>
 
 <style>
 body { font-family: Arial; margin:0; background:#f5f7fa;}
@@ -17,6 +17,8 @@ header { background:#111; color:white; padding:15px; text-align:center;}
 .time { color:#888; font-size:13px;}
 .place { color:#007bff; font-weight:bold;}
 .btn { font-size:12px; margin-left:6px;}
+.food { color:#e67e22;}
+.flight { color:#c0392b; font-weight:bold;}
 .toggle-btn { margin:5px; padding:6px 12px; border:none; border-radius:6px; cursor:pointer; background:#ff6600; color:white;}
 </style>
 
@@ -32,9 +34,9 @@ function switchMode(mode){
 <body>
 
 <header>
-<h2>東京5天4夜行程（V02）</h2>
+<h2>東京5天4夜行程（V01.4）</h2>
 
-<div>
+<div style="margin-top:10px;">
 🏨 <a href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Marunouchi" target="_blank" style="color:#ffd700;">
 飯店快速導航
 </a>
@@ -46,29 +48,113 @@ function switchMode(mode){
 
 <div class="container">
 
-<!-- ☀️ 晴天（完全保留） -->
+<!-- ☀️ 晴天 -->
 
 <div id="sunny">
 
-<div class="day"><div class="summary">Day1｜8/10</div><div class="content">
-✈️ CI100 → 東京站 / 東京一番街 / 晚餐 / 回飯店
-</div></div>
+<div class="day">
+<div class="summary">Day1｜8/10 抵達＋東京站</div>
+<div class="content">
+<div class="item flight">✈️ 08:50 桃園 → 成田（CI100）</div>
+<div class="item"><span class="time">13:00</span> 抵達 → 東京站</div>
+<div class="item"><span class="time">15:00</span> Check-in</div>
 
-<div class="day"><div class="summary">Day2</div><div class="content">
-淺草 → 尾花 → 晴空塔
-</div></div>
+<div class="item">
+<span class="time">17:00</span> 📍 
+<a class="place" href="https://www.google.com/search?q=東京キャラクターストリート">東京一番街</a>
+<a class="btn" href="https://maps.google.com/?q=東京キャラクターストリート">導航</a>
+</div>
 
-<div class="day"><div class="summary">Day3</div><div class="content">
-新宿 → 澀谷 → 銀座 → 小十
-</div></div>
+<div class="item">
+🐰 <a class="place" href="https://www.google.com/search?q=ちいかわらんど 東京駅">Chiikawa</a>
+<a class="btn" href="https://maps.google.com/?q=ちいかわらんど 東京駅">導航</a>
+</div>
 
-<div class="day"><div class="summary">Day4</div><div class="content">
-下北澤 → 中目黑 → Le Labo
-</div></div>
+<div class="item">
+🎀 <a class="place" href="https://www.google.com/search?q=Sanrio 東京駅">Hello Kitty</a>
+<a class="btn" href="https://maps.google.com/?q=Sanrio 東京駅">導航</a>
+</div>
 
-<div class="day"><div class="summary">Day5｜回程</div><div class="content">
-築地 → 機場
-</div></div>
+<div class="item food">18:30 🍣 
+<a class="place" href="https://www.google.com/search?q=六厘舎 東京駅">六厘舎</a>
+<a class="btn" href="https://maps.google.com/?q=六厘舎 東京駅">導航</a>
+</div>
+
+<div class="item">
+🏨 <a class="place" href="https://www.google.com/search?q=JR東日本大都会大飯店 東京城">回飯店</a>
+<a class="btn" href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Marunouchi">導航</a>
+</div>
+
+</div>
+</div>
+
+<div class="day">
+<div class="summary">Day2｜淺草＋尾花</div>
+<div class="content">
+
+<div class="item">
+<span class="time">10:00</span> 📍 
+<a class="place" href="https://www.google.com/search?q=淺草寺">淺草寺</a>
+<a class="btn" href="https://maps.google.com/?q=淺草寺">導航</a>
+</div>
+
+<div class="item"><span class="time">11:30</span> 出發尾花</div>
+
+<div class="item">
+<span class="time">12:00</span> 🍱 
+<a class="place" href="https://www.google.com/search?q=尾花 南千住">尾花</a>
+<a class="btn" href="https://maps.google.com/?q=尾花 南千住">導航</a>
+</div>
+
+<div class="item">
+<span class="time">15:00</span> 📍 
+<a class="place" href="https://www.google.com/search?q=東京晴空塔">晴空塔</a>
+<a class="btn" href="https://maps.google.com/?q=東京晴空塔">導航</a>
+</div>
+
+<div class="item">
+🏨 回飯店
+<a class="btn" href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Marunouchi">導航</a>
+</div>
+
+</div>
+</div>
+
+<div class="day">
+<div class="summary">Day3｜新宿 澀谷 銀座</div>
+<div class="content">
+
+<div class="item">
+<span class="time">10:00</span> 📍 
+<a class="place" href="https://www.google.com/search?q=新宿御苑">新宿御苑</a>
+<a class="btn" href="https://maps.google.com/?q=新宿御苑">導航</a>
+</div>
+
+<div class="item">
+<span class="time">13:00</span> 📍 
+<a class="place" href="https://www.google.com/search?q=SHIBUYA SKY">SHIBUYA SKY</a>
+<a class="btn" href="https://maps.google.com/?q=SHIBUYA SKY">導航</a>
+</div>
+
+<div class="item">
+<span class="time">16:00</span> 👜 
+<a class="place" href="https://www.google.com/search?q=Goyard 銀座">Goyard</a>
+<a class="btn" href="https://maps.google.com/?q=Goyard 銀座">導航</a>
+</div>
+
+<div class="item">
+<span class="time">19:00</span> 🍽 
+<a class="place" href="https://www.google.com/search?q=銀座小十">銀座小十</a>
+<a class="btn" href="https://maps.google.com/?q=銀座小十">導航</a>
+</div>
+
+<div class="item">
+🏨 回飯店
+<a class="btn" href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Marunouchi">導航</a>
+</div>
+
+</div>
+</div>
 
 </div>
 

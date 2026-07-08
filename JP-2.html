@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>東京5天4夜行程（V02.6）</title>
+<title>東京5天4夜行程（V02.7）</title>
 
 <style>
 body { font-family: Arial; margin:0; background:#f5f7fa;}
@@ -26,17 +26,7 @@ header { background:#111; color:white; padding:15px; text-align:center;}
 function switchMode(mode){
   document.getElementById("sunny").style.display = (mode==="sunny")?"block":"none";
   document.getElementById("rainy").style.display = (mode==="rainy")?"block":"none";
-  var e=document.getElementById("expense"); if(e)e.style.display=(mode==="expense")?"block":"none";
 }
-
-function calcJPY(row){
- const rate=0.205;
- const j=row.parentNode.parentNode.querySelector('.jpy');
- const t=row.parentNode.parentNode.querySelector('.twd');
- let v=parseFloat(j.value)||0;
- t.value=Math.round(v*rate);
-}
-
 </script>
 
 </head>
@@ -44,7 +34,7 @@ function calcJPY(row){
 <body>
 
 <header>
-<h2>東京5天4夜行程（V02.6）</h2>
+<h2>東京5天4夜行程（V02.7）</h2>
 
 <div style="margin-top:10px;">
 🏨 <a href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Marunouchi" target="_blank" style="color:#ffd700;">
@@ -53,7 +43,6 @@ function calcJPY(row){
 </div>
 
 <button class="toggle-btn" onclick="switchMode('sunny')">☀️ 晴天</button> <button class="toggle-btn" onclick="switchMode('rainy')">🌧 雨天</button>
-<button class="toggle-btn" onclick="switchMode('expense')">💰 記帳</button>
 
 </header>
 
@@ -377,91 +366,5 @@ function calcJPY(row){
 </div>
 
 </div>
-
-<div id="expense" style="display:none">
-<div class="day">
-<div class="summary">💰 旅遊記帳 V2.5（匯率固定 0.205）</div>
-<div class="content">
-<p><b>固定匯率：</b>1 JPY = 0.205 TWD</p>
-<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;width:100%">
-<tr><th>Day</th><th>項目</th><th>類別</th><th>JP 金額</th><th>台幣試算</th><th>退稅</th><th>備註</th></tr>
-<tr>
-<td><input style="width:45px"></td>
-<td><input style="width:180px"></td>
-<td><select><option>餐飲</option><option>交通</option><option>購物</option><option>住宿</option><option>其他</option></select></td>
-<td><input class="jpy" type="number" oninput="calcJPY(this)" style="width:90px"></td>
-<td><input class="twd" readonly style="width:90px;background:#f2f2f2"></td>
-<td><input type="checkbox"></td><td><input style="width:180px"></td></tr><tr>
-<td><input style="width:45px"></td>
-<td><input style="width:180px"></td>
-<td><select><option>餐飲</option><option>交通</option><option>購物</option><option>住宿</option><option>其他</option></select></td>
-<td><input class="jpy" type="number" oninput="calcJPY(this)" style="width:90px"></td>
-<td><input class="twd" readonly style="width:90px;background:#f2f2f2"></td>
-<td><input type="checkbox"></td><td><input style="width:180px"></td></tr><tr>
-<td><input style="width:45px"></td>
-<td><input style="width:180px"></td>
-<td><select><option>餐飲</option><option>交通</option><option>購物</option><option>住宿</option><option>其他</option></select></td>
-<td><input class="jpy" type="number" oninput="calcJPY(this)" style="width:90px"></td>
-<td><input class="twd" readonly style="width:90px;background:#f2f2f2"></td>
-<td><input type="checkbox"></td><td><input style="width:180px"></td></tr><tr>
-<td><input style="width:45px"></td>
-<td><input style="width:180px"></td>
-<td><select><option>餐飲</option><option>交通</option><option>購物</option><option>住宿</option><option>其他</option></select></td>
-<td><input class="jpy" type="number" oninput="calcJPY(this)" style="width:90px"></td>
-<td><input class="twd" readonly style="width:90px;background:#f2f2f2"></td>
-<td><input type="checkbox"></td><td><input style="width:180px"></td></tr><tr>
-<td><input style="width:45px"></td>
-<td><input style="width:180px"></td>
-<td><select><option>餐飲</option><option>交通</option><option>購物</option><option>住宿</option><option>其他</option></select></td>
-<td><input class="jpy" type="number" oninput="calcJPY(this)" style="width:90px"></td>
-<td><input class="twd" readonly style="width:90px;background:#f2f2f2"></td>
-<td><input type="checkbox"></td><td><input style="width:180px"></td></tr><tr>
-<td><input style="width:45px"></td>
-<td><input style="width:180px"></td>
-<td><select><option>餐飲</option><option>交通</option><option>購物</option><option>住宿</option><option>其他</option></select></td>
-<td><input class="jpy" type="number" oninput="calcJPY(this)" style="width:90px"></td>
-<td><input class="twd" readonly style="width:90px;background:#f2f2f2"></td>
-<td><input type="checkbox"></td><td><input style="width:180px"></td></tr><tr>
-<td><input style="width:45px"></td>
-<td><input style="width:180px"></td>
-<td><select><option>餐飲</option><option>交通</option><option>購物</option><option>住宿</option><option>其他</option></select></td>
-<td><input class="jpy" type="number" oninput="calcJPY(this)" style="width:90px"></td>
-<td><input class="twd" readonly style="width:90px;background:#f2f2f2"></td>
-<td><input type="checkbox"></td><td><input style="width:180px"></td></tr><tr>
-<td><input style="width:45px"></td>
-<td><input style="width:180px"></td>
-<td><select><option>餐飲</option><option>交通</option><option>購物</option><option>住宿</option><option>其他</option></select></td>
-<td><input class="jpy" type="number" oninput="calcJPY(this)" style="width:90px"></td>
-<td><input class="twd" readonly style="width:90px;background:#f2f2f2"></td>
-<td><input type="checkbox"></td><td><input style="width:180px"></td></tr><tr>
-<td><input style="width:45px"></td>
-<td><input style="width:180px"></td>
-<td><select><option>餐飲</option><option>交通</option><option>購物</option><option>住宿</option><option>其他</option></select></td>
-<td><input class="jpy" type="number" oninput="calcJPY(this)" style="width:90px"></td>
-<td><input class="twd" readonly style="width:90px;background:#f2f2f2"></td>
-<td><input type="checkbox"></td><td><input style="width:180px"></td></tr><tr>
-<td><input style="width:45px"></td>
-<td><input style="width:180px"></td>
-<td><select><option>餐飲</option><option>交通</option><option>購物</option><option>住宿</option><option>其他</option></select></td>
-<td><input class="jpy" type="number" oninput="calcJPY(this)" style="width:90px"></td>
-<td><input class="twd" readonly style="width:90px;background:#f2f2f2"></td>
-<td><input type="checkbox"></td><td><input style="width:180px"></td></tr></table><br><div class='note'>💡 匯率固定為 0.205，輸入 JP 金額後會自動試算台幣。</div>
-<hr>
-<h3>📊 V2.6 統計（預留）</h3>
-<ul>
-<li>🍜 餐飲總計：________ 円 / NT$ ________</li>
-<li>🚇 交通總計：________ 円 / NT$ ________</li>
-<li>🛍 購物總計：________ 円 / NT$ ________</li>
-<li>🏨 住宿總計：________ 円 / NT$ ________</li>
-<li><b>💰 全部總計：________ 円 / NT$ ________</b></li>
-</ul>
-
-<h3>🛍 必買清單</h3>
-<label><input type="checkbox"> Goyard</label><br>
-<label><input type="checkbox"> TEN.</label><br>
-<label><input type="checkbox"> e.m.</label><br>
-<label><input type="checkbox"> Soierie</label><br>
-<label><input type="checkbox"> Le Labo</label><br>
-<label><input type="checkbox"> AVIREX</label><br>
-</div></div></div></body>
+</body>
 </html>

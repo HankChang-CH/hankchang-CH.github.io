@@ -26,7 +26,17 @@ header { background:#111; color:white; padding:15px; text-align:center;}
 function switchMode(mode){
   document.getElementById("sunny").style.display = (mode==="sunny")?"block":"none";
   document.getElementById("rainy").style.display = (mode==="rainy")?"block":"none";
+  var e=document.getElementById("expense"); if(e)e.style.display=(mode==="expense")?"block":"none";
 }
+
+function calcJPY(row){
+ const rate=0.205;
+ const j=row.parentNode.parentNode.querySelector('.jpy');
+ const t=row.parentNode.parentNode.querySelector('.twd');
+ let v=parseFloat(j.value)||0;
+ t.value=Math.round(v*rate);
+}
+
 </script>
 
 </head>
@@ -43,6 +53,7 @@ function switchMode(mode){
 </div>
 
 <button class="toggle-btn" onclick="switchMode('sunny')">☀️ 晴天</button> <button class="toggle-btn" onclick="switchMode('rainy')">🌧 雨天</button>
+<button class="toggle-btn" onclick="switchMode('expense')">💰 記帳</button>
 
 </header>
 
@@ -261,6 +272,14 @@ function switchMode(mode){
 
 🏨 <a class="btn" href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Marunouchi">回飯店</a>
 
+<hr><b>🍴 Plan B 美食備案</b><br>
+🍜 <a class="place" href="https://www.google.com/search?q=六厘舍 東京駅">六厘舍</a>
+<a class="btn" href="https://maps.google.com/?q=六厘舍 東京駅">導航</a><br>
+🍣 <a class="place" href="https://www.google.com/search?q=根室花丸 KITTE">根室花丸</a>
+<a class="btn" href="https://maps.google.com/?q=根室花丸 KITTE">導航</a><br>
+🍛 <a class="place" href="https://www.google.com/search?q=東京カレー街">東京咖哩街</a>
+<a class="btn" href="https://maps.google.com/?q=東京カレー街">導航</a><br>
+<div class="note">💡 東京車站地下街、KITTE、一番街都能避雨。</div>
 </div>
 </div>
 
@@ -276,6 +295,14 @@ function switchMode(mode){
 
 🏨 <a class="btn" href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Marunouchi">回飯店</a>
 
+<hr><b>🍴 Plan B 美食備案</b><br>
+🐟 <a class="place" href="https://www.google.com/search?q=駒形前川 本店">駒形前川</a>
+<a class="btn" href="https://maps.google.com/?q=駒形前川 本店">導航</a><br>
+🍣 <a class="place" href="https://www.google.com/search?q=浅草 寿司清">壽司清</a>
+<a class="btn" href="https://maps.google.com/?q=浅草 寿司清">導航</a><br>
+🍜 <a class="place" href="https://www.google.com/search?q=与ろゐ屋 浅草">與力屋</a>
+<a class="btn" href="https://maps.google.com/?q=与ろゐ屋 浅草">導航</a><br>
+<div class="note">💡 尾花排隊太久可改吃駒形前川。</div>
 </div>
 </div>
 
@@ -291,6 +318,14 @@ function switchMode(mode){
 
 🏨 <a class="btn" href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Marunouchi">回飯店</a>
 
+<hr><b>🍴 Plan B 午餐備案</b><br>
+🍖 <a class="place" href="https://www.google.com/search?q=挽肉と米 渋谷">挽肉と米</a>
+<a class="btn" href="https://maps.google.com/?q=挽肉と米 渋谷">導航</a><br>
+🍜 <a class="place" href="https://www.google.com/search?q=AFURI 渋谷">AFURI</a>
+<a class="btn" href="https://maps.google.com/?q=AFURI 渋谷">導航</a><br>
+🥩 <a class="place" href="https://www.google.com/search?q=六歌仙 新宿">六歌仙</a>
+<a class="btn" href="https://maps.google.com/?q=六歌仙 新宿">導航</a><br>
+<div class="note">💡 17:00回飯店換衣服，17:40抵達小十。</div>
 </div>
 </div>
 
@@ -306,6 +341,19 @@ function switchMode(mode){
 
 🏨 <a class="btn" href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Marunouchi">回飯店</a>
 
+<hr><b>🍴 Plan B 美食備案</b><br>
+🥩 <a class="place" href="https://www.google.com/search?q=焼肉冷麺 韓てら 中目黒">韓てら燒肉</a>
+<a class="btn" href="https://maps.google.com/?q=焼肉冷麺 韓てら 中目黒">導航</a><br>
+☕ <a class="place" href="https://www.google.com/search?q=ONIBUS COFFEE Nakameguro">ONIBUS Coffee</a>
+<a class="btn" href="https://maps.google.com/?q=ONIBUS COFFEE Nakameguro">導航</a><br>
+☕ <a class="place" href="https://www.google.com/search?q=Starbucks Reserve Roastery Tokyo">Starbucks Reserve</a>
+<a class="btn" href="https://maps.google.com/?q=Starbucks Reserve Roastery Tokyo">導航</a><br>
+<hr><b>🛍 Shopping Backup</b><br>
+👕 <a class="place" href="https://www.google.com/search?q=AVIREX 渋谷店">AVIREX</a><br>
+💍 <a class="place" href="https://www.google.com/search?q=TEN. 東京">TEN.</a><br>
+💍 <a class="place" href="https://www.google.com/search?q=e.m. 青山店">e.m.</a><br>
+✨ <a class="place" href="https://www.google.com/search?q=Soierie 東京">Soierie</a><br>
+<div class="note">💡 雨天建議以代官山、Le Labo、咖啡廳為主。</div>
 </div>
 </div>
 
@@ -317,11 +365,103 @@ function switchMode(mode){
 
 📍 <a class="place" href="https://www.google.com/search?q=銀座six">銀座SIX</a> <a class="btn" href="https://maps.google.com/?q=銀座six">導航</a><br>
 
+<hr><b>🍴 Plan B 美食備案</b><br>
+🍣 <a class="place" href="https://www.google.com/search?q=築地虎杖">築地虎杖</a>
+<a class="btn" href="https://maps.google.com/?q=築地虎杖">導航</a><br>
+🍣 <a class="place" href="https://www.google.com/search?q=根室花丸 KITTE">根室花丸</a>
+<a class="btn" href="https://maps.google.com/?q=根室花丸 KITTE">導航</a><br>
+<div class="note">💡 建議14:00左右搭N'EX前往成田。</div>
 </div>
 </div>
 
 </div>
 
 </div>
-</body>
+
+<div id="expense" style="display:none">
+<div class="day">
+<div class="summary">💰 旅遊記帳 V2.5（匯率固定 0.205）</div>
+<div class="content">
+<p><b>固定匯率：</b>1 JPY = 0.205 TWD</p>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;width:100%">
+<tr><th>Day</th><th>項目</th><th>類別</th><th>JP 金額</th><th>台幣試算</th><th>退稅</th><th>備註</th></tr>
+<tr>
+<td><input style="width:45px"></td>
+<td><input style="width:180px"></td>
+<td><select><option>餐飲</option><option>交通</option><option>購物</option><option>住宿</option><option>其他</option></select></td>
+<td><input class="jpy" type="number" oninput="calcJPY(this)" style="width:90px"></td>
+<td><input class="twd" readonly style="width:90px;background:#f2f2f2"></td>
+<td><input type="checkbox"></td><td><input style="width:180px"></td></tr><tr>
+<td><input style="width:45px"></td>
+<td><input style="width:180px"></td>
+<td><select><option>餐飲</option><option>交通</option><option>購物</option><option>住宿</option><option>其他</option></select></td>
+<td><input class="jpy" type="number" oninput="calcJPY(this)" style="width:90px"></td>
+<td><input class="twd" readonly style="width:90px;background:#f2f2f2"></td>
+<td><input type="checkbox"></td><td><input style="width:180px"></td></tr><tr>
+<td><input style="width:45px"></td>
+<td><input style="width:180px"></td>
+<td><select><option>餐飲</option><option>交通</option><option>購物</option><option>住宿</option><option>其他</option></select></td>
+<td><input class="jpy" type="number" oninput="calcJPY(this)" style="width:90px"></td>
+<td><input class="twd" readonly style="width:90px;background:#f2f2f2"></td>
+<td><input type="checkbox"></td><td><input style="width:180px"></td></tr><tr>
+<td><input style="width:45px"></td>
+<td><input style="width:180px"></td>
+<td><select><option>餐飲</option><option>交通</option><option>購物</option><option>住宿</option><option>其他</option></select></td>
+<td><input class="jpy" type="number" oninput="calcJPY(this)" style="width:90px"></td>
+<td><input class="twd" readonly style="width:90px;background:#f2f2f2"></td>
+<td><input type="checkbox"></td><td><input style="width:180px"></td></tr><tr>
+<td><input style="width:45px"></td>
+<td><input style="width:180px"></td>
+<td><select><option>餐飲</option><option>交通</option><option>購物</option><option>住宿</option><option>其他</option></select></td>
+<td><input class="jpy" type="number" oninput="calcJPY(this)" style="width:90px"></td>
+<td><input class="twd" readonly style="width:90px;background:#f2f2f2"></td>
+<td><input type="checkbox"></td><td><input style="width:180px"></td></tr><tr>
+<td><input style="width:45px"></td>
+<td><input style="width:180px"></td>
+<td><select><option>餐飲</option><option>交通</option><option>購物</option><option>住宿</option><option>其他</option></select></td>
+<td><input class="jpy" type="number" oninput="calcJPY(this)" style="width:90px"></td>
+<td><input class="twd" readonly style="width:90px;background:#f2f2f2"></td>
+<td><input type="checkbox"></td><td><input style="width:180px"></td></tr><tr>
+<td><input style="width:45px"></td>
+<td><input style="width:180px"></td>
+<td><select><option>餐飲</option><option>交通</option><option>購物</option><option>住宿</option><option>其他</option></select></td>
+<td><input class="jpy" type="number" oninput="calcJPY(this)" style="width:90px"></td>
+<td><input class="twd" readonly style="width:90px;background:#f2f2f2"></td>
+<td><input type="checkbox"></td><td><input style="width:180px"></td></tr><tr>
+<td><input style="width:45px"></td>
+<td><input style="width:180px"></td>
+<td><select><option>餐飲</option><option>交通</option><option>購物</option><option>住宿</option><option>其他</option></select></td>
+<td><input class="jpy" type="number" oninput="calcJPY(this)" style="width:90px"></td>
+<td><input class="twd" readonly style="width:90px;background:#f2f2f2"></td>
+<td><input type="checkbox"></td><td><input style="width:180px"></td></tr><tr>
+<td><input style="width:45px"></td>
+<td><input style="width:180px"></td>
+<td><select><option>餐飲</option><option>交通</option><option>購物</option><option>住宿</option><option>其他</option></select></td>
+<td><input class="jpy" type="number" oninput="calcJPY(this)" style="width:90px"></td>
+<td><input class="twd" readonly style="width:90px;background:#f2f2f2"></td>
+<td><input type="checkbox"></td><td><input style="width:180px"></td></tr><tr>
+<td><input style="width:45px"></td>
+<td><input style="width:180px"></td>
+<td><select><option>餐飲</option><option>交通</option><option>購物</option><option>住宿</option><option>其他</option></select></td>
+<td><input class="jpy" type="number" oninput="calcJPY(this)" style="width:90px"></td>
+<td><input class="twd" readonly style="width:90px;background:#f2f2f2"></td>
+<td><input type="checkbox"></td><td><input style="width:180px"></td></tr></table><br><div class='note'>💡 匯率固定為 0.205，輸入 JP 金額後會自動試算台幣。</div>
+<hr>
+<h3>📊 V2.6 統計（預留）</h3>
+<ul>
+<li>🍜 餐飲總計：________ 円 / NT$ ________</li>
+<li>🚇 交通總計：________ 円 / NT$ ________</li>
+<li>🛍 購物總計：________ 円 / NT$ ________</li>
+<li>🏨 住宿總計：________ 円 / NT$ ________</li>
+<li><b>💰 全部總計：________ 円 / NT$ ________</b></li>
+</ul>
+
+<h3>🛍 必買清單</h3>
+<label><input type="checkbox"> Goyard</label><br>
+<label><input type="checkbox"> TEN.</label><br>
+<label><input type="checkbox"> e.m.</label><br>
+<label><input type="checkbox"> Soierie</label><br>
+<label><input type="checkbox"> Le Labo</label><br>
+<label><input type="checkbox"> AVIREX</label><br>
+</div></div></div></body>
 </html>

@@ -2,10 +2,9 @@
 
 <html lang="zh-TW">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>東京5天4夜行程（V02.9）</title>
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>東京5天4夜行程（V03.2）</title>
 <style>
 body { font-family: Arial; margin:0; background:#f5f7fa;}
 header { background:#111; color:white; padding:15px; text-align:center;}
@@ -22,366 +21,204 @@ header { background:#111; color:white; padding:15px; text-align:center;}
 .toggle-btn { margin:5px; padding:6px 12px; border:none; border-radius:6px; cursor:pointer; background:#ff6600; color:white;}
 .note{margin:8px 0;padding:8px 10px;background:#fff8dc;border-left:4px solid #f39c12;border-radius:6px;font-size:14px;}
 </style>
-
 <script>
 function switchMode(mode){
   document.getElementById("sunny").style.display = (mode==="sunny")?"block":"none";
   document.getElementById("rainy").style.display = (mode==="rainy")?"block":"none";
 }
 </script>
-
 </head>
-
 <body>
-
 <header>
-<h2>東京5天4夜行程（V02.9）</h2>
-
+<h2>東京5天4夜行程（V03.2）</h2>
 <div style="margin-top:10px;">
-🏨 <a href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Marunouchi" target="_blank" style="color:#ffd700;">
+🏨 <a href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Marunouchi" style="color:#ffd700;" target="_blank">
 飯店快速導航
 </a>
 </div>
-
 <button class="toggle-btn" onclick="switchMode('sunny')">☀️ 晴天</button> <button class="toggle-btn" onclick="switchMode('rainy')">🌧 雨天</button>
-
 </header>
-
 <div class="container">
-
 <!-- ☀️ 晴天 -->
-
 <div id="sunny">
-
 <div class="day">
 <div class="summary">Day1｜8/10 抵達＋東京站</div>
 <div class="content">
 <div class="item flight">✈️ 08:50 桃園 → 成田（CI100）</div>
 <div class="item"><span class="time">13:15</span> 抵達 → 東京站</div>
 <div class="item"><span class="time">15:20</span> Check-in</div>
-
 <div class="item">
 <span class="time">17:00</span> 📍 
 <a class="place" href="https://www.google.com/search?q=東京キャラクターストリート">東京一番街 (吉依卡哇/Hello Kitty 買買買)</a>
 <a class="btn" href="https://maps.google.com/?q=東京キャラクターストリート">導航</a>
 </div>
-
 <div class="item">
 🐰 <a class="place" href="https://www.google.com/search?q=ちいかわらんど 東京駅">Chiikawa</a>
 <a class="btn" href="https://maps.google.com/?q=ちいかわらんど 東京駅">導航</a>
 </div>
-
 <div class="item">
 🎀 <a class="place" href="https://www.google.com/search?q=Sanrio 東京駅">Hello Kitty</a>
 <a class="btn" href="https://maps.google.com/?q=Sanrio 東京駅">導航</a>
 </div>
-
 <div class="item food">18:30 🍣 
 <a class="place" href="https://www.google.com/search?q=六厘舎 東京駅">六厘舎</a>
 <a class="btn" href="https://maps.google.com/?q=六厘舎 東京駅">導航</a>
 </div>
-
 <div class="item">
 🏨 <a class="place" href="https://www.google.com/search?q=JR東日本大都会大飯店 東京城">回飯店</a>
 <a class="btn" href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Marunouchi">導航</a>
 </div>
-
 </div>
 </div>
-
 <div class="day">
 <div class="summary">Day2｜8/11 淺草＋尾花</div>
 <div class="content">
-
 <div class="item">
 <span class="time">10:00</span> 📍 
 <a class="place" href="https://www.google.com/search?q=淺草寺">淺草寺</a>
 <a class="btn" href="https://maps.google.com/?q=淺草寺">導航</a>
 </div>
-
 <div class="item"><span class="time">11:30</span> 出發尾花</div>
 <div class="note">
 💡 建議 11:00 前抵達尾花，避免排隊 1~2 小時。
 </div>
-
 <div class="item">
 <span class="time">12:00</span> 🍱 
 <a class="place" href="https://www.google.com/search?q=尾花 南千住">尾花 (鰻魚飯)</a>
 <a class="btn" href="https://maps.google.com/?q=尾花 南千住">導航</a>
 </div>
-
 <div class="item">
 <span class="time">15:00</span> 📍 
 <a class="place" href="https://www.google.com/search?q=東京晴空塔">晴空塔</a>
 <a class="btn" href="https://maps.google.com/?q=東京晴空塔">導航</a>
 </div>
-
-<div class="item">
+<div class="item food"><span class="time">19:30</span> 🍜 <a class="place" href="https://www.google.com/search?q=一蘭 淺草店">一蘭（淺草店）晚餐</a> <a class="btn" href="https://maps.google.com/?q=一蘭 淺草店">導航</a></div><div class="item">
 🏨 回飯店
 <a class="btn" href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Marunouchi">導航</a>
 </div>
-
 </div>
 </div>
-
 <div class="day">
 <div class="summary">Day3｜8/12 新宿 澀谷 銀座</div>
-<div class="content">
-
-<div class="item">
-<span class="time">10:00</span> 📍 
-<a class="place" href="https://www.google.com/search?q=新宿御苑">新宿御苑</a>
-<a class="btn" href="https://maps.google.com/?q=新宿御苑">導航</a>
+<div class="content"><div class="item"><span class="time">10:00</span> 📍 <a class="place" href="https://www.google.com/search?q=新宿御苑">新宿御苑</a> <a class="btn" href="https://maps.google.com/?q=新宿御苑">導航</a></div><div class="item"><span class="time">12:00</span> 🍜 午餐</div><div class="item"><span class="time">13:30</span> 💍 <a class="place" href="https://www.google.com/search?q=TEN. ルミネ新宿2店">TEN. ルミネ新宿2店（LUMINE 新宿2 2F）</a> <a class="btn" href="https://maps.google.com/?q=TEN. ルミネ新宿2店">導航</a></div><div class="item"><span class="time">15:00</span> 🎱 <a class="place" href="https://www.google.com/search?q=プロショップUSA 渋谷店">プロショップUSA 渋谷店（Super Zan S／撞球用品）</a> <a class="btn" href="https://maps.google.com/?q=プロショップUSA 渋谷店">導航</a></div><div class="item"><span class="time">16:00</span> 👜 <a class="place" href="https://www.google.com/search?q=Goyard 銀座">Goyard（包包）</a> <a class="btn" href="https://maps.google.com/?q=Goyard 銀座">導航</a></div><div class="item"><span class="time">17:00</span> 👔 回飯店換衣服</div><div class="item"><span class="time">17:40</span> 🚶 前往銀座小十</div><div class="item"><span class="time">18:00</span> 🍽 <a class="place" href="https://www.google.com/search?q=銀座小十">銀座小十（米其林二星）</a></div><div class="item">🏨 回飯店</div></div>
 </div>
-
-<div class="item">
-<span class="time">13:00</span> 📍 
-<a class="place" href="https://www.google.com/search?q=SHIBUYA SKY">SHIBUYA SKY</a>
-<a class="btn" href="https://maps.google.com/?q=SHIBUYA SKY">導航</a>
-</div>
-
-<div class="item">
-<span class="time">16:00</span> 👜
-<a class="place" href="https://www.google.com/search?q=Goyard 銀座">Goyard (包包)</a>
-<a class="btn" href="https://maps.google.com/?q=Goyard 銀座">導航</a>
-</div>
-
-<div class="item">
-<span class="time">17:00</span> 👔
-<a class="place" href="https://www.google.com/search?q=JR東日本大都会大飯店 東京丸之內">回飯店換衣服</a>
-<a class="btn" href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Marunouchi">導航</a>
-</div>
-
-<div class="item">
-<span class="time">17:40</span> 🚶 前往銀座小十
-</div>
-
-<div class="item">
-<span class="time">18:00</span> 🍽 
-<a class="place" href="https://www.google.com/search?q=銀座小十">銀座小十 (米其林二星)</a>
-<a class="btn" href="https://maps.google.com/?q=銀座小十">導航</a>
-</div>
-
-<div class="item">
-🏨 回飯店
-<a class="btn" href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Marunouchi">導航</a>
-</div>
-
-</div>
-</div>
-
 <div class="day">
 <div class="summary">Day4｜8/13 文青 × 銀飾 × 香水</div>
-<div class="content">
-
-<div class="item">
-<span class="time">11:00</span> 📍 
-<a class="place" href="https://www.google.com/search?q=下北澤">下北澤</a>
-<a class="btn" href="https://maps.google.com/?q=下北澤">導航</a>
+<div class="content"><div class="item"><span class="time">09:00</span> 🚆 東京站出發</div><div class="item"><span class="time">09:45</span> ⛩️ <a class="place" href="https://www.google.com/search?q=明治神宮">明治神宮</a></div><div class="item"><span class="time">11:00</span> 🥞 <a class="place" href="https://www.google.com/search?q=crisscross 表參道">crisscross（Brunch）</a></div><div class="item"><span class="time">12:15</span> 💍 <a class="place" href="https://www.google.com/search?q=e.m. 青山店">e.m. 青山／表參道店</a></div><div class="item"><span class="time">13:30</span> 🍵 <a class="place" href="https://www.google.com/search?q=ななや 青山">ななや（Nanaya）</a></div><div class="item"><span class="time">14:00</span> 🚶 表參道 → 澀谷</div><div class="item"><span class="time">16:00</span> 🌆 <a class="place" href="https://www.google.com/search?q=SHIBUYA SKY">SHIBUYA SKY</a></div><div class="item"><span class="time">17:30</span> 🌿 <a class="place" href="https://www.google.com/search?q=Le Labo 代官山">Le Labo</a></div><div class="item"><span class="time">18:00</span> 📚 代官山 T-SITE</div><div class="item"><span class="time">19:00</span> 🏨 回飯店</div></div>
 </div>
-
-<div class="item">
-<span class="time">12:00</span> 💍 
-<a class="place" href="https://www.google.com/search?q=TEN. 東京">TEN.（豬鼻鏈）</a>
-<a class="btn" href="https://maps.google.com/?q=TEN. 東京">導航</a>
-</div>
-
-<div class="item">
-<span class="time">13:00</span> 💍 
-<a class="place" href="https://www.google.com/search?q=e.m. 青山店">e.m.（銀飾）</a>
-<a class="btn" href="https://maps.google.com/?q=e.m. 青山店">導航</a>
-</div>
-
-<div class="item">
-<span class="time">14:00</span> 📍 
-<a class="place" href="https://www.google.com/search?q=中目黑">中目黑</a>
-<a class="btn" href="https://maps.google.com/?q=中目黑">導航</a>
-</div>
-
-<div class="item">
-<span class="time">15:00</span> ✨ 
-<a class="place" href="https://www.google.com/search?q=Soierie 東京">Soierie（飾品）</a>
-<a class="btn" href="https://maps.google.com/?q=Soierie 東京">導航</a>
-</div>
-
-<div class="item">
-<span class="time">16:00</span> 🌿 
-<a class="place" href="https://www.google.com/search?q=Le Labo 代官山">Le Labo（Gaiac 10）</a>
-<a class="btn" href="https://maps.google.com/?q=Le Labo 代官山">導航</a>
-</div>
-
-<div class="item">
-<span class="time">17:00</span> ☕ 
-<a class="place" href="https://www.google.com/search?q=Starbucks Reserve Roastery Tokyo">Starbucks Reserve Roastery Tokyo（備案）</a>
-<a class="btn" href="https://maps.google.com/?q=Starbucks Reserve Roastery Tokyo">導航</a>
-</div>
-
-<div class="item">
-🏨 <a class="place" href="https://www.google.com/search?q=JR東日本大都会大飯店 東京丸之內">回飯店</a>
-<a class="btn" href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Marunouchi">導航</a>
-</div>
-
-</div>
-</div>
-
 <div class="day">
 <div class="summary">Day5｜8/14 回程</div>
 <div class="content">
-
 <div class="item">
 <span class="time">08:30</span> 📍
 <a class="place" href="https://www.google.com/search?q=築地場外市場">築地市場</a>
 <a class="btn" href="https://maps.google.com/?q=築地場外市場">導航</a>
 </div>
-
 <div class="item">
 <span class="time">10:30</span> ☕
 <a class="place" href="https://www.google.com/search?q=Depot+Tokyo">Depot（咖啡／早午餐）</a>
 <a class="btn" href="https://maps.google.com/?q=Depot+Tokyo">導航</a>
 </div>
-
 <div class="item">
 <span class="time">11:30</span> 🏨 回飯店拿行李
 <a class="btn" href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Marunouchi">導航</a>
 </div>
-
 <div class="item">
 <span class="time">13:30</span> 🚆 前往東京站搭 N'EX
 </div>
-
 <div class="item flight">
 ✈️ 17:55 成田 → 桃園（CI105）
 </div>
-
 </div>
 </div>
-
-
 </div>
 </div>
-
 <!-- 🌧 雨天（完整版） -->
-
 <div id="rainy" style="display:none">
-
 <div class="day">
 <div class="summary">Day1｜東京站室內</div>
 <div class="content">
 📍 <a class="place" href="https://www.google.com/search?q=東京一番街">東京一番街</a>
-<a class="btn" href="https://maps.google.com/?q=東京一番街">導航</a><br>
+<a class="btn" href="https://maps.google.com/?q=東京一番街">導航</a><br/>
 
-📍 <a class="place" href="https://www.google.com/search?q=東京拉麵街">東京拉麵街</a> <a class="btn" href="https://maps.google.com/?q=東京拉麵街">導航</a><br>
+📍 <a class="place" href="https://www.google.com/search?q=東京拉麵街">東京拉麵街</a> <a class="btn" href="https://maps.google.com/?q=東京拉麵街">導航</a><br/>
 
 🏨 <a class="btn" href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Marunouchi">回飯店</a>
-
-<hr><b>🍴 Plan B 美食備案</b><br>
+<hr/><b>🍴 Plan B 美食備案</b><br/>
 🍜 <a class="place" href="https://www.google.com/search?q=六厘舍 東京駅">六厘舍</a>
-<a class="btn" href="https://maps.google.com/?q=六厘舍 東京駅">導航</a><br>
+<a class="btn" href="https://maps.google.com/?q=六厘舍 東京駅">導航</a><br/>
 🍣 <a class="place" href="https://www.google.com/search?q=根室花丸 KITTE">根室花丸</a>
-<a class="btn" href="https://maps.google.com/?q=根室花丸 KITTE">導航</a><br>
+<a class="btn" href="https://maps.google.com/?q=根室花丸 KITTE">導航</a><br/>
 🍛 <a class="place" href="https://www.google.com/search?q=東京カレー街">東京咖哩街</a>
-<a class="btn" href="https://maps.google.com/?q=東京カレー街">導航</a><br>
+<a class="btn" href="https://maps.google.com/?q=東京カレー街">導航</a><br/>
 <div class="note">💡 東京車站地下街、KITTE、一番街都能避雨。</div>
 </div>
 </div>
-
 <div class="day">
 <div class="summary">Day2｜淺草室內版</div>
 <div class="content">
 📍 <a class="place" href="https://www.google.com/search?q=淺草文化觀光中心">文化觀光中心</a>
-<a class="btn" href="https://maps.google.com/?q=淺草文化觀光中心">導航</a><br>
+<a class="btn" href="https://maps.google.com/?q=淺草文化觀光中心">導航</a><br/>
 
-📍 <a class="place" href="https://www.google.com/search?q=東京晴空塔">晴空塔商場</a> <a class="btn" href="https://maps.google.com/?q=東京晴空塔">導航</a><br>
+📍 <a class="place" href="https://www.google.com/search?q=東京晴空塔">晴空塔商場</a> <a class="btn" href="https://maps.google.com/?q=東京晴空塔">導航</a><br/>
 
-📍 <a class="place" href="https://www.google.com/search?q=尾花 南千住">尾花</a> <a class="btn" href="https://maps.google.com/?q=尾花 南千住">導航</a><br>
+📍 <a class="place" href="https://www.google.com/search?q=尾花 南千住">尾花</a> <a class="btn" href="https://maps.google.com/?q=尾花 南千住">導航</a><br/>
 
 🏨 <a class="btn" href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Marunouchi">回飯店</a>
-
-<hr><b>🍴 Plan B 美食備案</b><br>
+<hr/><b>🍴 Plan B 美食備案</b><br/>
 🐟 <a class="place" href="https://www.google.com/search?q=駒形前川 本店">駒形前川</a>
-<a class="btn" href="https://maps.google.com/?q=駒形前川 本店">導航</a><br>
+<a class="btn" href="https://maps.google.com/?q=駒形前川 本店">導航</a><br/>
 🍣 <a class="place" href="https://www.google.com/search?q=浅草 寿司清">壽司清</a>
-<a class="btn" href="https://maps.google.com/?q=浅草 寿司清">導航</a><br>
+<a class="btn" href="https://maps.google.com/?q=浅草 寿司清">導航</a><br/>
 🍜 <a class="place" href="https://www.google.com/search?q=与ろゐ屋 浅草">與力屋</a>
-<a class="btn" href="https://maps.google.com/?q=与ろゐ屋 浅草">導航</a><br>
+<a class="btn" href="https://maps.google.com/?q=与ろゐ屋 浅草">導航</a><br/>
 <div class="note">💡 尾花排隊太久可改吃駒形前川。</div>
 🥩 <a class="place" href="https://www.google.com/search?q=利久牛舌 東京晴空塔 Solamachi">利久牛舌（東京晴空塔）</a>
-<a class="btn" href="https://maps.google.com/?q=利久牛舌 東京晴空塔 Solamachi">導航</a><br>
+<a class="btn" href="https://maps.google.com/?q=利久牛舌 東京晴空塔 Solamachi">導航</a><br/>
 🍦 <a class="place" href="https://www.google.com/search?q=壽壽喜園 淺草本店">壽壽喜園（世界最濃抹茶冰淇淋）</a>
-<a class="btn" href="https://maps.google.com/?q=壽壽喜園 淺草本店">導航</a><br>
+<a class="btn" href="https://maps.google.com/?q=壽壽喜園 淺草本店">導航</a><br/>
 </div>
 </div>
-
 <div class="day">
 <div class="summary">Day3｜購物強化</div>
 <div class="content">
 📍 <a class="place" href="https://www.google.com/search?q=新宿Lumine">Lumine</a>
-<a class="btn" href="https://maps.google.com/?q=新宿Lumine">導航</a><br>
+<a class="btn" href="https://maps.google.com/?q=新宿Lumine">導航</a><br/>
 
-📍 <a class="place" href="https://www.google.com/search?q=澀谷PARCO">澀谷PARCO</a> <a class="btn" href="https://maps.google.com/?q=澀谷PARCO">導航</a><br>
+📍 <a class="place" href="https://www.google.com/search?q=澀谷PARCO">澀谷PARCO</a> <a class="btn" href="https://maps.google.com/?q=澀谷PARCO">導航</a><br/>
 
-📍 <a class="place" href="https://www.google.com/search?q=Goyard 銀座">Goyard</a> <a class="btn" href="https://maps.google.com/?q=Goyard 銀座">導航</a><br>
+📍 <a class="place" href="https://www.google.com/search?q=Goyard 銀座">Goyard</a> <a class="btn" href="https://maps.google.com/?q=Goyard 銀座">導航</a><br/>
 
 🏨 <a class="btn" href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Marunouchi">回飯店</a>
-
-<hr><b>🍴 Plan B 午餐備案</b><br>
+<hr/><b>🍴 Plan B 午餐備案</b><br/>
 🍖 <a class="place" href="https://www.google.com/search?q=挽肉と米 渋谷">挽肉と米</a>
-<a class="btn" href="https://maps.google.com/?q=挽肉と米 渋谷">導航</a><br>
+<a class="btn" href="https://maps.google.com/?q=挽肉と米 渋谷">導航</a><br/>
 🍜 <a class="place" href="https://www.google.com/search?q=AFURI 渋谷">AFURI</a>
-<a class="btn" href="https://maps.google.com/?q=AFURI 渋谷">導航</a><br>
+<a class="btn" href="https://maps.google.com/?q=AFURI 渋谷">導航</a><br/>
 🥩 <a class="place" href="https://www.google.com/search?q=六歌仙 新宿">六歌仙</a>
-<a class="btn" href="https://maps.google.com/?q=六歌仙 新宿">導航</a><br>
+<a class="btn" href="https://maps.google.com/?q=六歌仙 新宿">導航</a><br/>
 <div class="note">💡 17:00回飯店換衣服，17:40抵達小十。</div>
 </div>
 </div>
-
 <div class="day">
 <div class="summary">Day4｜文青室內</div>
-<div class="content">
-📍 <a class="place" href="https://www.google.com/search?q=代官山T-SITE">代官山T-SITE</a>
-<a class="btn" href="https://maps.google.com/?q=代官山T-SITE">導航</a><br>
-
-📍 <a class="place" href="https://www.google.com/search?q=蔦屋書店 代官山">蔦屋書店</a> <a class="btn" href="https://maps.google.com/?q=蔦屋書店 代官山">導航</a><br>
-
-📍 <a class="place" href="https://www.google.com/search?q=Le Labo 代官山">Le Labo</a> <a class="btn" href="https://maps.google.com/?q=Le Labo 代官山">導航</a><br>
-
-🏨 <a class="btn" href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Marunouchi">回飯店</a>
-
-<hr><b>🍴 Plan B 美食備案</b><br>
-🥩 <a class="place" href="https://www.google.com/search?q=焼肉冷麺 韓てら 中目黒">韓てら燒肉</a>
-<a class="btn" href="https://maps.google.com/?q=焼肉冷麺 韓てら 中目黒">導航</a><br>
-☕ <a class="place" href="https://www.google.com/search?q=ONIBUS COFFEE Nakameguro">ONIBUS Coffee</a>
-<a class="btn" href="https://maps.google.com/?q=ONIBUS COFFEE Nakameguro">導航</a><br>
-☕ <a class="place" href="https://www.google.com/search?q=Starbucks Reserve Roastery Tokyo">Starbucks Reserve</a>
-<a class="btn" href="https://maps.google.com/?q=Starbucks Reserve Roastery Tokyo">導航</a><br>
-<hr><b>🛍 Shopping Backup</b><br>
-👕 <a class="place" href="https://www.google.com/search?q=AVIREX 渋谷店">AVIREX</a><br>
-💍 <a class="place" href="https://www.google.com/search?q=TEN. 東京">TEN.</a><br>
-💍 <a class="place" href="https://www.google.com/search?q=e.m. 青山店">e.m.</a><br>
-✨ <a class="place" href="https://www.google.com/search?q=Soierie 東京">Soierie</a><br>
-<div class="note">💡 雨天建議以代官山、Le Labo、咖啡廳為主。</div>
+<div class="content"><div class="item"><span class="time">09:00</span> 🚆 東京站出發</div><div class="item"><span class="time">09:45</span> ⛩️ <a class="place" href="https://www.google.com/search?q=明治神宮">明治神宮</a></div><div class="item"><span class="time">11:00</span> 🥞 <a class="place" href="https://www.google.com/search?q=crisscross 表參道">crisscross（Brunch）</a></div><div class="item"><span class="time">12:15</span> 💍 <a class="place" href="https://www.google.com/search?q=e.m. 青山店">e.m. 青山／表參道店</a></div><div class="item"><span class="time">13:30</span> 🍵 <a class="place" href="https://www.google.com/search?q=ななや 青山">ななや（Nanaya）</a></div><div class="item"><span class="time">14:00</span> 🚶 表參道 → 澀谷</div><div class="item"><span class="time">16:00</span> 🌆 <a class="place" href="https://www.google.com/search?q=SHIBUYA SKY">SHIBUYA SKY</a></div><div class="item"><span class="time">17:30</span> 🌿 <a class="place" href="https://www.google.com/search?q=Le Labo 代官山">Le Labo</a></div><div class="item"><span class="time">18:00</span> 📚 代官山 T-SITE</div><div class="item"><span class="time">19:00</span> 🏨 回飯店</div></div>
 </div>
-</div>
-
 <div class="day">
 <div class="summary">Day5｜回程</div>
 <div class="content">
 📍 <a class="place" href="https://www.google.com/search?q=築地市場">築地市場</a>
-<a class="btn" href="https://maps.google.com/?q=築地市場">導航</a><br>
+<a class="btn" href="https://maps.google.com/?q=築地市場">導航</a><br/>
 
-📍 <a class="place" href="https://www.google.com/search?q=銀座six">銀座SIX</a> <a class="btn" href="https://maps.google.com/?q=銀座six">導航</a><br>
-
-<hr><b>🍴 Plan B 美食備案</b><br>
+📍 <a class="place" href="https://www.google.com/search?q=銀座six">銀座SIX</a> <a class="btn" href="https://maps.google.com/?q=銀座six">導航</a><br/>
+<hr/><b>🍴 Plan B 美食備案</b><br/>
 🍣 <a class="place" href="https://www.google.com/search?q=築地虎杖">築地虎杖</a>
-<a class="btn" href="https://maps.google.com/?q=築地虎杖">導航</a><br>
+<a class="btn" href="https://maps.google.com/?q=築地虎杖">導航</a><br/>
 🍣 <a class="place" href="https://www.google.com/search?q=根室花丸 KITTE">根室花丸</a>
-<a class="btn" href="https://maps.google.com/?q=根室花丸 KITTE">導航</a><br>
+<a class="btn" href="https://maps.google.com/?q=根室花丸 KITTE">導航</a><br/>
 <div class="note">💡 建議14:00左右搭N'EX前往成田。</div>
 </div>
 </div>
-
-</div>
-
 </div>
 </body>
 </html>

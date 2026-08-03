@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>東京五天四夜自由行 V7.0 Final</title>
+<title>東京五天四夜自由行 V7.1 Final</title>
 
 <style>
 
@@ -276,6 +276,13 @@ header h2{
 
 }
 
+
+.summary{cursor:pointer;user-select:none;}
+.summary::before{content:"▶ ";color:#1976d2;}
+.day.active .summary::before{content:"▼ ";}
+.day .content{display:none;}
+.day.active .content{display:block;}
+
 </style>
 
 <script>
@@ -296,6 +303,22 @@ window.onload=function(){
 
 }
 
+
+document.addEventListener("DOMContentLoaded",function(){
+["sunny","rainy"].forEach(function(id){
+ const root=document.getElementById(id);
+ if(!root)return;
+ const days=root.querySelectorAll(".day");
+ days.forEach(function(day,i){
+   if(i===0) day.classList.add("active");
+   day.querySelector(".summary").addEventListener("click",function(){
+      days.forEach(d=>{if(d!==day)d.classList.remove("active");});
+      day.classList.toggle("active");
+   });
+ });
+});
+});
+
 </script>
 
 </head>
@@ -308,7 +331,7 @@ window.onload=function(){
 
 🇯🇵 東京五天四夜自由行
 
-V7.0 Final
+V7.1 Final
 
 </h2>
 
